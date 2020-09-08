@@ -1,11 +1,17 @@
 import 'package:caps_nicaragua/src/pages/home.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
     @override
     Widget build(BuildContext context) {
+
+        SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
+            statusBarColor: ThemeData().primaryColor,
+        ));
+
         return MaterialApp(
             debugShowCheckedModeBanner: false,
             title: 'CAPS Nicaragua',
@@ -22,8 +28,8 @@ class MyApp extends StatelessWidget {
                 fontFamily: 'Museo',
 
                 textTheme: TextTheme(
-                    headline1: TextStyle(fontSize: 36.0, fontWeight: FontWeight.bold, fontFamily: 'Museo'),
-                    headline2: TextStyle(fontSize: 24.0, fontWeight: FontWeight.bold, fontFamily: 'Museo'),
+                    headline1: TextStyle(fontSize: 30.0, fontWeight: FontWeight.bold, fontFamily: 'Museo', color: Colors.white),
+                    headline2: TextStyle(fontSize: 20.0, fontWeight: FontWeight.bold, fontFamily: 'Museo', color: Colors.white),
                     bodyText2: TextStyle(fontSize: 16.0,),
                 ),
             ),
