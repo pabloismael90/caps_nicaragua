@@ -1,6 +1,7 @@
 import 'package:caps_nicaragua/src/pages/home.dart';
+import 'package:caps_nicaragua/src/pages/lista_cursos.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
+//import 'package:flutter/services.dart';
 
 void main() => runApp(MyApp());
 
@@ -8,16 +9,17 @@ class MyApp extends StatelessWidget {
     @override
     Widget build(BuildContext context) {
 
-        SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
-            statusBarColor: ThemeData().primaryColor,
-        ));
+        // SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
+        //     statusBarColor: ThemeData().primaryColor,
+        // ));
 
         return MaterialApp(
             debugShowCheckedModeBanner: false,
             title: 'CAPS Nicaragua',
-            initialRoute: 'home',
+            initialRoute: 'lista_cursos',
             routes: {
                 'home' : (BuildContext context) => HomePage(),
+                'lista_cursos' : (BuildContext context) => ListaCursos(),
             },
             theme: ThemeData(
                 // Colores predeterminados
