@@ -25,8 +25,10 @@ class Curso {
     //Metodo para obtener la foto
     getFotocurso() {
         if (imagen == null) {
+            print(imagen);
             return 'https://picsum.photos/800/600';
         }else{
+            print(imagen);
             return 'https://picsum.photos/800/600';
         }
     }

@@ -1,5 +1,7 @@
 import 'package:caps_nicaragua/src/provider/curso_provider.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_html/flutter_html.dart';
+
 
 class ListaCursos extends StatelessWidget {
   final cursosprovider = CursosProvider();
@@ -11,24 +13,26 @@ class ListaCursos extends StatelessWidget {
       builder: (BuildContext context, AsyncSnapshot<List> snapshot) {
         if (snapshot.hasData) {
           return Scaffold(
-            body: Column(
-              children: <Widget>[
-                SafeArea(
-                  child: Container(
-                    child: Text('Lista de Cursos'),
-                  ),
-                ),
-                SingleChildScrollView(
-                  child: Container(
-                    padding: EdgeInsets.symmetric(horizontal: 20.0),
-                    child: Column(
-                      children: <Widget>[
-                        _cardcurso(snapshot.data, context),
-                      ],
+            body: SingleChildScrollView(
+                          child: Column(
+                children: <Widget>[
+                  SafeArea(
+                    child: Container(
+                      child: Text('Lista de Cursos'),
                     ),
                   ),
-                ),
-              ],
+                  SingleChildScrollView(
+                    child: Container(
+                      padding: EdgeInsets.symmetric(horizontal: 20.0),
+                      child: Column(
+                        children: <Widget>[
+                          _cardcurso(snapshot.data, context),
+                        ],
+                      ),
+                    ),
+                  ),
+                ],
+              ),
             ),
           );
         } else {
@@ -39,6 +43,7 @@ class ListaCursos extends StatelessWidget {
       },
     );
   }
+  
 
   Widget _cardcurso(List cursos, BuildContext context) {
     return ListView.builder(
@@ -48,8 +53,7 @@ class ListaCursos extends StatelessWidget {
                     children: <Widget>[
                     Container(
                         padding: EdgeInsets.only(bottom: 20.0),
-                        child: Image.network(
-                        'https://picsum.photos/800/600',
+                        child: Image.network('https://picsum.photos/800/600',
                         fit: BoxFit.cover,
                         ),
                     ),
@@ -57,7 +61,10 @@ class ListaCursos extends StatelessWidget {
                     SizedBox(
                         height: 20.0,
                     ),
-                    Text(cursos[index].descripcion)
+                    Html(
+                        data:cursos[index].descripcion,
+                    ),
+                    //Text(cursos[index].descripcion),
                     ],
                 ),
             );
