@@ -9,6 +9,7 @@ class ListaCursos extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return FutureBuilder(
+    
       future: cursosprovider.getCursos(),
       builder: (BuildContext context, AsyncSnapshot<List> snapshot) {
         if (snapshot.hasData) {
@@ -46,6 +47,7 @@ class ListaCursos extends StatelessWidget {
   
 
   Widget _cardcurso(List cursos, BuildContext context) {
+      
     return ListView.builder(
         itemBuilder: (context, index){
             final cardCurso = Card(
@@ -61,6 +63,7 @@ class ListaCursos extends StatelessWidget {
                     SizedBox(
                         height: 20.0,
                     ),
+                    
                     Html(
                         data:cursos[index].descripcion,
                     ),
@@ -68,7 +71,7 @@ class ListaCursos extends StatelessWidget {
                     ],
                 ),
             );
-
+            print(cursos[index].getFotocurso().toString());
             return GestureDetector(
                 child: cardCurso,
             );
