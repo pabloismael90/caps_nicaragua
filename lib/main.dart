@@ -1,5 +1,6 @@
 import 'package:caps_nicaragua/src/pages/home.dart';
 import 'package:caps_nicaragua/src/pages/lista_cursos.dart';
+import 'package:caps_nicaragua/src/pages/lista_modulos.dart';
 import 'package:flutter/material.dart';
 //import 'package:flutter/services.dart';
 
@@ -20,6 +21,7 @@ class MyApp extends StatelessWidget {
             routes: {
                 'home' : (BuildContext context) => HomePage(),
                 'lista_cursos' : (BuildContext context) => ListaCursos(),
+                'lista_modulos' : (BuildContext context) => ListaModulos(),
             },
             theme: ThemeData(
                 // Colores predeterminados
