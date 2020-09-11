@@ -71,7 +71,7 @@ class ListaCursos extends StatelessWidget {
                     ],
                 ),
             );
-            print(cursos[index].getFotocurso().toString());
+            print(cursos[index].getFotocurso());
             return GestureDetector(
                 child: cardCurso,
             );
