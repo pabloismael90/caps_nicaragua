@@ -1,3 +1,4 @@
+import 'package:caps_nicaragua/src/pages/detalle_tema.dart';
 import 'package:caps_nicaragua/src/pages/home.dart';
 import 'package:caps_nicaragua/src/pages/lista_cursos.dart';
 import 'package:caps_nicaragua/src/pages/lista_modulos.dart';
@@ -22,6 +23,7 @@ class MyApp extends StatelessWidget {
                 'home' : (BuildContext context) => HomePage(),
                 'lista_cursos' : (BuildContext context) => ListaCursos(),
                 'lista_modulos' : (BuildContext context) => ListaModulos(),
+                'detalle' : (BuildContext context) => DetalleTema(),
             },
             theme: ThemeData(
                 // Colores predeterminados

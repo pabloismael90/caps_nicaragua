@@ -57,11 +57,11 @@ class Curso {
 class Cursos {
   List<Curso> items = new List();
 
-  Cursos.fromJsonList(List<dynamic> jsonList) {
-    for (var item in jsonList) {
-      final caps = new Curso.fromJsonMap(item);
+    Cursos.fromJsonList(List<dynamic> jsonList) {
+        for (var item in jsonList) {
+            final curso = new Curso.fromJsonMap(item);
 
-      items.add(caps);
+            items.add(curso);
+        }
     }
-  }
 }
