@@ -50,13 +50,13 @@ class ListaCursos extends StatelessWidget {
         final cardCurso = Card(
           child: Column(
             children: <Widget>[
-              Container(
-                padding: EdgeInsets.only(bottom: 20.0),
-                child: Image.network(
-                  cursos[index].imagen,
-                  fit: BoxFit.cover,
-                ),
-              ),
+            //   Container(
+            //     padding: EdgeInsets.only(bottom: 20.0),
+            //     child: Image.network(
+            //       cursos[index].imagen,
+            //       fit: BoxFit.cover,
+            //     ),
+            //   ),
               Text(cursos[index].titulo),
               SizedBox(
                 height: 20.0,

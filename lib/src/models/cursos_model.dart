@@ -8,6 +8,7 @@ class Curso {
   String imagen;
   String descripcion;
   String fecha;
+  String activo;
 
   Curso({
     this.id,
@@ -15,6 +16,7 @@ class Curso {
     this.imagen,
     this.descripcion,
     this.fecha,
+    this.activo,
   });
   //Metodo para resivir la informacion
   Curso.fromJsonMap(Map<String, dynamic> json) {
@@ -23,6 +25,7 @@ class Curso {
     imagen = json['imagen'];
     descripcion = json['descripcion'];
     fecha = json['fecha'];
+    activo = json['activo'].toString();
   }
   //Metodo para obtener la foto
   getFotocurso() {
